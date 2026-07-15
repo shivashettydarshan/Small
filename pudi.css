@@ -1,0 +1,91 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Noto Sans Kannada', sans-serif;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+    background:linear-gradient(-45deg,#ff6b6b,#feca57,#48dbfb,#1dd1a1);
+    background-size:400% 400%;
+    animation:gradientBG 10s ease infinite;
+}
+
+/* Animated Background */
+@keyframes gradientBG{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+.container{
+    width:100%;
+    max-width:700px;
+
+    background:rgba(255,255,255,0.95);
+    backdrop-filter:blur(10px);
+
+    padding:30px;
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 15px 40px rgba(0,0,0,0.25);
+
+    transition:.3s;
+}
+
+.container:hover{
+    transform:translateY(-5px);
+    box-shadow:0 20px 45px rgba(0,0,0,0.3);
+}
+
+h1{
+    color:#d35400;
+    font-size:32px;
+    margin-bottom:25px;
+    text-shadow:1px 1px 3px rgba(0,0,0,0.15);
+}
+
+video{
+    width:100%;
+    border-radius:15px;
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+    border:4px solid #ffffff;
+}
+
+video:hover{
+    transform:scale(1.01);
+    transition:.3s;
+}
+
+/* Mobile Responsive */
+@media(max-width:600px){
+
+    .container{
+        padding:20px;
+    }
+
+    h1{
+        font-size:24px;
+    }
+}
